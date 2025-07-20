@@ -1,0 +1,12 @@
+<!-- FILE: home.html -->
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero hero-background">
+  <div class="hero-text">
+    <h1>Hi, I'm Efa Power</h1>
+    <p>Python Developer, Laptop Engineer & Software Installer</p>
+    <a href="{% url 'projects' %}" class="btn">View My Work</a>
+  </div>
+</section>
+{% endblock %}

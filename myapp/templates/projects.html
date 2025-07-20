@@ -1,0 +1,24 @@
+<!-- FILE: projects.html -->
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<section class="section">
+  <h2>My Projects</h2>
+  <div class="project-list">
+    <div class="project-item">
+      <h3>Laptop Dealer Platform</h3>
+      <p>A full-featured Django web platform for laptop sales. It supports dealer logins, image uploads, category filtering, Google Maps integration, and buyer contact forms. Includes both super-admin and low-level admin dashboards.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Engineer Services App</h3>
+      <p>A web service that connects customers to laptop engineers by location. Engineers register with their contact info and location. Users can browse services, view profiles, and send messages.</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Software Installation Toolkit</h3>
+      <p>A personalized setup toolkit and hands-on service for installing Windows OS (Windows 11, 10, 8, 7) and drivers on laptops for clients, optimized for speed, compatibility, and productivity. Including desktop office tools, media players, design apps, and developer tools.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}My Portfolio{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="icon" href="{% static 'images/favicon-32x32.png' %}" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">PowerTech</div>
+      <div class="menu-toggle" onclick="toggleMenu(this)">☰</div>
+      <div class="nav-links" id="navLinks">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-centered">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PowerTech. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu(toggleBtn) {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('show');
+      toggleBtn.textContent = nav.classList.contains('show') ? '✖' : '☰';
+    }
+  </script>
+</body>
+</html>
